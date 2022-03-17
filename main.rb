@@ -2,8 +2,8 @@ require_relative 'lib/product'
 require_relative 'lib/book'
 require_relative 'lib/film'
 
-film = Movie.from_file('/data/films/01.txt')
-book = Film.from_file('/data/books/01.txt')
+film = Film.from_file('/data/films/01.txt')
+book = Book.from_file('/data/books/01.txt')
 puts book
 puts film
 
