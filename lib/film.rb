@@ -1,5 +1,5 @@
 require_relative 'product'
-class Movie < Product
+class Film < Product
   attr_accessor :title, :director, :premiere
   def initialize(params)
     super
