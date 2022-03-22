@@ -1,13 +1,21 @@
 class Product
-  attr_accessor :price, :left_on_stock
+  attr_accessor :price, :amount
 
   def initialize(params)
-    @price = params[:price]
-    @left_on_stock = params[:left_on_stock]
+    @price = params[:price].to_f
+    @amount = params[:amount].to_i
   end
 
-  def self.from_file(path)
+  def to_s
+    "$ #{@price}, (осталось #{@amount})"
+  end
+
+  def update(params)
+    @price = params[:price] if params[:price]
+    @amount = params[:amount] if params[:amount]
+  end
+
+  def self.from_file(file_path)
     raise NotImplementedError
   end
 end
-
