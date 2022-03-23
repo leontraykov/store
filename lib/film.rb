@@ -1,12 +1,6 @@
-# encoding: utf-8
-#
-# Класс Фильм
 class Film < Product
-  attr_accessor :title, :year, :director
+  attr_reader :title, :year, :director
 
-  # Метод класса from_file считывает данные о фильме из файла, путь к которому
-  # ему передали в качестве параметра и передает их на вход своему же
-  # конструктору с нужными ключами.
   def self.from_file(file_path)
     lines = File.readlines(file_path, encoding: 'UTF-8').map { |l| l.chomp }
 

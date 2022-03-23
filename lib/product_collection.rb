@@ -48,7 +48,6 @@ class ProductCollection
     when :title
       @products.sort_by! { |product| product.to_s }
     when :price
-      # @products.sort_by! { |product| product.price }
       @products.sort_by!(&:price) 
     when :amount
       @products.sort_by! { |product| product.amount }

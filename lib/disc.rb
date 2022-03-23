@@ -1,5 +1,5 @@
 class Disc < Product
-  attr_accessor :singer, :year, :genre, :album
+  attr_reader :singer, :year, :genre, :album
 
   def self.from_file(file_path)
     lines = File.readlines(file_path, encoding: 'UTF-8').map { |l| l.chomp }
